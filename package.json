@@ -1,0 +1,62 @@
+{
+  "name": "@osspim/grid-renderer",
+  "version": "2.1.1",
+  "main": "dist/react.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ossgroupp/grid-renderer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ossgroupp/grid-renderer/issues"
+  },
+  "scripts": {
+    "dev:react": "NODE_ENV=development parcel ./public-react/index.html --out-dir .dev-react/",
+    "build": "webpack",
+    "start": "webpack --watch",
+    "prepublish": "webpack",
+    "test": "jest",
+    "release": "release-it"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-react-jsx": "^7.3.0",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.4.0",
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "jest": "^24.9.0",
+    "parcel": "^1.12.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-test-renderer": "^16.9.0",
+    "release-it": "^13.5.2",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest.setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
